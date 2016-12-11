@@ -2,15 +2,15 @@ name: BetterHelp
 author: ondraczsk
 api: [1.14.0, 2.0.0]
 version: 1.0
-main: BetterHelp/Main.php 
+main: BetterHelp/Main
 
-# Commands:
-command:
-	help:
-		description: Napoveda
-		usage: /help
+commands:
+ help:
+  permission: help.cmd
+  description: Napoveda
+  usage: /help
 
-# Permissions 
 permissions:
-	help.command:
-		default: true
+ help.cmd:
+  default: true
+  description: ZMusicBox Commands
