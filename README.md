@@ -1,0 +1,2 @@
+# BetterHelp
+/help edited command
