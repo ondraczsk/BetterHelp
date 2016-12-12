@@ -2,23 +2,26 @@
 
 namespace BetterHelp;
 
-use pocketmine\nplugin\PharPluginLoader
+use pocketmine\nplugin\PharPluginLoader;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\utils\Config;
 use pocketmine\command\CommandSender;
+use pocketmine\Server;
 
 // My first non-copied plugin! I learning from Plugin school web :P
 
-class BetterHelp extends PluginBase{
+class BetterHelp extends PluginBase {
   public function onLoad(){
     $this->getLogger()->info("Plugin Napoveda se nacita..");
   }
   public function onEnable(){
     $this->getLogger()->info("Plugin Napoveda zapnut..");
     getServer()->getPluginManager()->registerEvents($this,$this);
-    @mkdir($this->getDataFolder()); $this->config = new Config ($this->getDataFolder() . "config.yml" , Config::YAML, array());
+    @mkdir($this->getDataFolder()); 
+    $this->config = new Config ($this->getDataFolder() . "config.yml" , Config::YAML, array());
+    
   }
   
 
