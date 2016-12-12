@@ -4,6 +4,7 @@ namespace ondraczsk\BetterHelp;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
+use pocketmine\utils\Config;
 use pocketmine\command\CommandSender;
 
 // My first non-copied plugin! I learning from Plugin school web :P
@@ -14,7 +15,7 @@ class Main extends PluginBase{
   }
   public function onEnable(){
     $this->getLogger()->info("Plugin Napoveda zapnut..");
-    getServer()->getPluginManager()->registerEvents($this,$this);
+    getServer()->getPluginManager()->registerEvents($this,$this);@mkdir($this->getDataFolder()); $this->config = new Config ($this->getDataFolder() . "config.yml" , Config::YAML, array());
   }
   
 
