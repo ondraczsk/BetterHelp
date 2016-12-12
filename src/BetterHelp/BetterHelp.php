@@ -1,6 +1,8 @@
 <?php
 
-namespace ondraczsk\BetterHelp;
+namespace BetterHelp;
+
+use pocketmine\nplugin\PharPluginLoader
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
@@ -9,7 +11,7 @@ use pocketmine\command\CommandSender;
 
 // My first non-copied plugin! I learning from Plugin school web :P
 
-class Main extends PluginBase{
+class BetterHelp extends PluginBase{
   public function onLoad(){
     $this->getLogger()->info("Plugin Napoveda se nacita..");
   }
