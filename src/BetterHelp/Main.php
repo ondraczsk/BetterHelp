@@ -14,9 +14,23 @@ class Main extends PluginBase{
   }
   public function onEnable(){
     $this->getLogger()->info("Plugin Napoveda zapnut..");
+    getServer()->getPluginManager()->registerEvents($this,$this);
   }
+  
+
+  public function onJoin(PlayerJoinEvent $event){ $player = $event->getPlayer(); $name = $player->getName();
+                                                 
+  public function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
+    if($cmd->getName() == "help")
+      { $sender->sendMessage("Test!"); } return true;
+  }
+  
+  }
+  
+  
   public function onDisable(){
     $this->getLogger()->info("Plugin Napoveda vypnut..");
+  }
 
    
 }
