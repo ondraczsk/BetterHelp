@@ -15,7 +15,8 @@ class Main extends PluginBase{
   }
   public function onEnable(){
     $this->getLogger()->info("Plugin Napoveda zapnut..");
-    getServer()->getPluginManager()->registerEvents($this,$this);@mkdir($this->getDataFolder()); $this->config = new Config ($this->getDataFolder() . "config.yml" , Config::YAML, array());
+    getServer()->getPluginManager()->registerEvents($this,$this);
+    @mkdir($this->getDataFolder()); $this->config = new Config ($this->getDataFolder() . "config.yml" , Config::YAML, array());
   }
   
 
