@@ -16,7 +16,7 @@ use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 
 
-class Main extends PluginBase implents Listener {
+class BetterHelp extends PluginBase implents Listener {
 
 /*LOADING */
 public function onLoad(){
